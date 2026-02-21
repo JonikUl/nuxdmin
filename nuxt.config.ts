@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['assets/css/main.css'],
   modules: ['@nuxt/ui', '@pinia/nuxt'],
   devtools: {
     enabled: true,
@@ -32,15 +32,4 @@ export default defineNuxtConfig({
     // Add your environment variables here
   },
 
-  vite: {
-    resolve: {
-      alias: {
-        '@': import.meta.dir,
-        '~': import.meta.dir,
-        '~/': import.meta.dir + '/',
-        '@@': import.meta.dir + '/.nuxt',
-        '~~': import.meta.dir + '/.nuxt',
-      },
-    },
-  },
 })
