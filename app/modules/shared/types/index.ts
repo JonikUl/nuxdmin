@@ -32,10 +32,5 @@ export enum SortOrder {
   DESC = 'desc',
 }
 
-// Log levels
-export enum LogLevel {
-  DEBUG = 'debug',
-  INFO = 'info',
-  WARN = 'warn',
-  ERROR = 'error',
-}
+// Log levels - type alias for flexibility
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error'

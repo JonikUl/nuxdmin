@@ -8,3 +8,4 @@
 - Use Oxlint before ESLint (fast linting first, then ESLint for deeper checks)
 - Use Oxfmt instead of Prettier for code formatting
 - Never add signatures (Co-Authored-By) to commit messages
+- Use atomic commits - one logical change per commit, commit after each task

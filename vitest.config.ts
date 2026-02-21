@@ -1,6 +1,6 @@
-import { defineVitestConfig } from 'nuxt-vitest/config'
+import { defineConfig } from 'vitest/config'
 
-export default defineVitestConfig({
+export default defineConfig({
   test: {
     environment: 'happy-dom',
     globals: true,
