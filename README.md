@@ -1,8 +1,8 @@
-# Nuxt Admin Template
+# nuxdmin
 
-> Reusable admin dashboard template built with Nuxt 4, TypeScript, and Nuxt UI
+> 🚀 Modern admin dashboard template built with Nuxt 4, TypeScript, and Nuxt UI
 
-A modular, full-stack admin template designed to be quickly adapted for various projects.
+A modular, full-stack admin dashboard template designed to be quickly adapted for various projects. Built with Nuxt 4, Nuxt UI, TypeScript, and following a Modular Monolith architecture.
 
 ## Tech Stack
 
@@ -52,7 +52,7 @@ pnpm preview
 ## Project Structure
 
 ```
-nuxt-admin-template/
+nuxdmin/
 ├── app/
 │   └── modules/           # Feature modules (Modular Monolith)
 │       ├── auth/          # Authentication & authorization

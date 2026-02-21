@@ -1,9 +1,9 @@
 {
-  "name": "nuxt-admin-template",
+  "name": "nuxdmin",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Reusable admin dashboard template built with Nuxt 4, TypeScript, and Nuxt UI",
+  "description": "🚀 Modern admin dashboard template built with Nuxt 4, TypeScript, and Nuxt UI",
   "author": "",
   "license": "MIT",
   "scripts": {
