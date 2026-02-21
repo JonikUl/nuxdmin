@@ -9,3 +9,4 @@
 - Use Oxfmt instead of Prettier for code formatting
 - Never add signatures (Co-Authored-By) to commit messages
 - Use atomic commits - one logical change per commit, commit after each task
+- Never work directly on main - always create a feature branch, merge to main via pull request after completion
