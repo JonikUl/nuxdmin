@@ -1,0 +1,40 @@
+/**
+ * Main CSS
+ *
+ * Tailwind CSS + Nuxt UI imports
+ */
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* CSS Variables for theming */
+@theme {
+  /* Color scheme */
+  --color-primary: oklch(0.55 0.22 285);
+  --color-primary-hover: oklch(0.5 0.22 285);
+  --color-secondary: oklch(0.6 0.2 270);
+
+  /* Dark mode support */
+  color-scheme: light dark;
+
+  /* Spacing */
+  --header-height: 4rem;
+  --sidebar-width: 16rem;
+}
+
+/* Base styles */
+:root {
+  color-scheme: light dark;
+}
+
+/* Dark mode specific styles */
+.dark {
+  color-scheme: dark;
+}
+
+/* Transitions */
+* {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

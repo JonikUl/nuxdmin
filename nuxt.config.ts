@@ -1,0 +1,46 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxt/ui', '@pinia/nuxt'],
+  devtools: {
+    enabled: true,
+  },
+
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
+
+  app: {
+    head: {
+      title: 'Nuxt Admin Template',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Reusable admin dashboard template built with Nuxt 4' },
+      ],
+    },
+  },
+
+  runtimeConfig: {
+    // Private keys (only available server-side)
+    // Add your environment variables here
+  },
+
+  vite: {
+    resolve: {
+      alias: {
+        '@': import.meta.dir,
+        '~': import.meta.dir,
+        '~/': import.meta.dir + '/',
+        '@@': import.meta.dir + '/.nuxt',
+        '~~': import.meta.dir + '/.nuxt',
+      },
+    },
+  },
+})

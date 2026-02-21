@@ -1,0 +1,26 @@
+{
+  "categories": {
+    "correctness": "warn",
+    "suspicious": "warn",
+    "perf": "warn",
+    "style": "warn",
+    "restrictive": "off"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "globals": [],
+  "ignore": [
+    "node_modules/**",
+    ".nuxt/**",
+    ".output/**",
+    "dist/**",
+    "coverage/**",
+    "*.config.js",
+    "*.config.mjs",
+    "vitest.config.ts"
+  ],
+  "plugins": []
+}

@@ -1,0 +1,13 @@
+# Nuxt ignores
+node_modules
+dist
+.output
+.git
+.cache
+.nuxtrc
+.env*
+coverage
+.nyc_output
+*.log
+README.md
+CHANGELOG.md
