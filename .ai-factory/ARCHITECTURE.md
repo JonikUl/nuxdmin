@@ -58,6 +58,29 @@ nuxt-admin-template/
 - `app/modules/*/composables/` → Auto-imported by Nuxt
 - `app/modules/*/components/` → Auto-imported by Nuxt
 
+## Nuxt 4 Path Aliases
+
+Nuxt 4 provides built-in path aliases. These are auto-configured in `.nuxt/tsconfig.json` — no manual `vite.alias` configuration needed.
+
+| Alias | Resolves To | Usage Example |
+|-------|-------------|---------------|
+| `~/` or `@/` | `./app/` | `import { foo } from '~/modules/auth'` |
+| `~/*` or `@/*` | `./app/*` | `import Bar from '~/components/Bar.vue'` |
+| `~~/` or `@@/` | Project root (`./`) | `import config from '~/nuxt.config'` |
+| `~~/*` or `@@/*` | `./` (root) | `import { foo } from '~/server/utils'` |
+| `assets/` | `./app/assets/` | `import '~/assets/css/main.css'` |
+| `public/` | `./public/` | `<img src="/images/logo.png">` |
+| `#server` | `./server/` | Server-side utilities |
+| `#app` | Nuxt app internals | Framework code (read-only) |
+| `#ui` | `@nuxt/ui` module | Nuxt UI components |
+
+**Important Notes:**
+- In `nuxt.config.ts`, use `~/app/...` for files in the app directory (e.g., `~/app/assets/css/main.css`)
+- The `~` alias in nuxt.config.ts resolves to project root, not `app/` directory
+- In component/composable code, `~` and `@` resolve to `app/` directory
+- For `app/assets/`, use the `assets/` alias: `import '~/assets/css/main.css'`
+- Server routes use `#server` prefix: `import { foo } from '#server/utils'`
+
 ## Dependency Rules
 
 **Module Communication Rules:**
