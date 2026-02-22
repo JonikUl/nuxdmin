@@ -8,14 +8,14 @@
  */
 
 // Types
-export type * from './types'
-export type * from './types/forms'
+export type * from './types';
+export type * from './types/forms';
 
 // Utils
-export * from './utils/logger'
-export * from './utils/format'
-export * from './utils/validation'
+export * from './utils/logger';
+export * from './utils/format';
+export * from './utils/validation';
 
 // Composables
-export * from './composables/useLoading'
-export * from './composables/useNotification'
+export * from './composables/useLoading';
+export * from './composables/useNotification';

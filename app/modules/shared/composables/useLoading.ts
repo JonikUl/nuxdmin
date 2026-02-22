@@ -4,43 +4,42 @@
  * Manage loading state for async operations
  */
 
-import { createLogger } from '~/modules/shared/utils/logger'
+import { createLogger } from '~/modules/shared/utils/logger';
 
-const logger = createLogger('useLoading')
+const logger = createLogger('useLoading');
 
 export function useLoading(initialState = false) {
-  const isLoading = ref(initialState)
-  const error = ref<string | null>(null)
+  const isLoading = ref(initialState);
+  const error = ref<string | null>(null);
 
   const startLoading = () => {
-    isLoading.value = true
-    error.value = null
-    logger.debug('Loading started')
-  }
+    isLoading.value = true;
+    error.value = null;
+    logger.debug('Loading started');
+  };
 
   const stopLoading = (err?: string | Error | null) => {
-    isLoading.value = false
+    isLoading.value = false;
     if (err) {
-      const errorMessage = typeof err === 'string' ? err : err.message
-      error.value = errorMessage
-      logger.error('Loading failed', { error: errorMessage })
+      const errorMessage = typeof err === 'string' ? err : err.message;
+      error.value = errorMessage;
+      logger.error('Loading failed', { error: errorMessage });
     } else {
-      logger.debug('Loading completed')
+      logger.debug('Loading completed');
     }
-  }
+  };
 
   const withLoading = async <T>(fn: () => Promise<T>): Promise<T> => {
-    startLoading()
+    startLoading();
     try {
-      const result = await fn()
-      stopLoading()
-      return result
+      const result = await fn();
+      stopLoading();
+      return result;
+    } catch (err) {
+      stopLoading(err instanceof Error ? err : new Error(String(err)));
+      throw err;
     }
-    catch (err) {
-      stopLoading(err instanceof Error ? err : new Error(String(err)))
-      throw err
-    }
-  }
+  };
 
   return {
     isLoading,
@@ -48,5 +47,5 @@ export function useLoading(initialState = false) {
     startLoading,
     stopLoading,
     withLoading,
-  }
+  };
 }
