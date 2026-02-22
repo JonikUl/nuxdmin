@@ -22,5 +22,12 @@
     "*.config.mjs",
     "vitest.config.ts"
   ],
-  "plugins": []
+  "plugins": [
+    "eslint",
+    "unicorn",
+    "import",
+    "promise",
+    "vitest",
+    "vue"
+  ]
 }

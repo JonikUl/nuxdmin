@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "experimentalSortImports": {
+    "groups": ["builtin", "external", ["internal", "subpath"], ["parent", "sibling", "index"], "style", "unknown"]
+  },
+  "experimentalTailwindcss": true,
+  "ignorePatterns": ["dist/**", "*.min.js", "node_modules/**", ".nuxt/**", ".nitro/**", ".claude/**", "./.ai-factory/**"]
+}
